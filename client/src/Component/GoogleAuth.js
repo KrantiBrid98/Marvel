@@ -62,11 +62,17 @@ class GoogleAuth extends Component {
   };
 
   onSignInClick = () => {
-    this.auth.signIn();
+    if (this.auth)
+      this.auth.signIn();
+    else
+      console.log(`Should open on port 3000 only`)
   };
 
   onSignOutClick = () => {
-    this.auth.signOut();
+    if (this.auth)
+      this.auth.signOut();
+    else
+      console.log(`Should open on port 3000 only`)
   };
 
   render() {

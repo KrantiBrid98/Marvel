@@ -5,6 +5,6 @@ export const api = axios.create({
 })
 
 export const db = axios.create({
-    baseURL: 'http://localhost:4000'
+    baseURL: 'http://localhost:8080/comment'
 })
 
