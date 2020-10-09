@@ -68,6 +68,7 @@ class CharacterList extends Component {
                 <div>
                     {this.showLayout()}
                 </div>
+                <div style={{paddingBottom: `50px`}}>
                 <Link to={`/marvel/page${this.props.match.params.pageNo * 1 - 1}`}>
                     <button className="ui button font navButton" onClick={() => {
                         this.props.match.params.pageNo = this.props.match.params.pageNo * 1 - 1
@@ -80,10 +81,8 @@ class CharacterList extends Component {
                         this.fetchCharacterList()
                     }}>next</button>
                 </Link>
-                }
+                </div>
             </div>
-
-
         )
     }
 }
