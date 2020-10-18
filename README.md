@@ -8,7 +8,7 @@
 - Google oAuth has been used for authentication.
 - Backend has been added to store user-comments.
 - NestJS which is a Node.js framework, has been used to set up the server.
-- MySQL is used for storing the user comments.
+- MySQL is used as database for storing the user comments.
 
 ## Marvel API link:
 - https://gateway.marvel.com/
