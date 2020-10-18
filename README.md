@@ -5,7 +5,10 @@
 
 ## Objective:
 - To implement basic concepts of react like React-router, refs, React portals, middleware, fetching data through API and populating the fetched data through Route Links
-- Google oAuth has been used for authentication
+- Google oAuth has been used for authentication.
+- Backend has been added to store user-comments.
+- NestJS which is a Node.js framework, has been used to set up the server.
+- MySQL is used for storing the user comments.
 
 ## Marvel API link:
 - https://gateway.marvel.com/
