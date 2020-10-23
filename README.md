@@ -10,6 +10,8 @@
 - NestJS which is a Node.js framework, has been used to set up the server.
 - MySQL is used as database for storing the user comments.
 
+<p> comments cannot be added for now using the above hoisted link. You can however take a look at the comment functionality by locally running the app on your system</p>
+
 ## Marvel API link:
 - https://gateway.marvel.com/
 - https://developer.marvel.com/
