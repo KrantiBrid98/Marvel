@@ -17,3 +17,14 @@ export const ADD_COMMENT = comment => {
         payload: comment
     }
 }
+
+export const UPDATE_COMMENTS_LIST = comments => {   
+    console.log(comments)
+    comments = comments.sort((a, b) => {
+       return b.time - a.time;
+    })
+    return {
+        type: `COMMENTS_LIST`,
+        payload: comments
+    }
+}

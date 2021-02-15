@@ -27,8 +27,12 @@ export class CommentsService {
     }
 
     async updateDisLikes(commentId) {
-        await this.commentRepository.decrement({commentId},`likes`,1)
+        await this.commentRepository.increment({commentId},`dislike`,1)
         return this.commentRepository.find();
     }
 
+    async deleteComment(commentId){
+        await this.commentRepository.delete({commentId})
+        return this.commentRepository.find(); 
+    }
 }

@@ -1,7 +1,8 @@
 import React, { Component, Fragment } from 'react'
 import { connect } from 'react-redux'
-import { ADD_COMMENT } from '../../Action'
+import { ADD_COMMENT, UPDATE_COMMENTS_LIST } from '../../Action'
 import CommentList from "./commentList";
+import { db } from "../api";
 
 class CommentSection extends Component {
     constructor() {
@@ -27,16 +28,36 @@ class CommentSection extends Component {
     validateInput = () => {
         this.setState({
             comment: this.commentInput.current.value
+        }, () => {
+            this.props.ADD_COMMENT(this.state.comment)
         })
-        this.props.ADD_COMMENT(this.state.comment)
+    }
+
+    addCommentToDB = async () => {
+        const { userName, userId } = this.props;
+        const date = new Date().toDateString()
+
+        await db.post(``, {
+            userName,
+            userId,
+            date,
+            comment: this.state.comment,
+            time: new Date().getTime()
+        }).then(async () => {
+            const response = await db.get();
+            console.log(response.data, `data`)
+            this.props.UPDATE_COMMENTS_LIST(response.data)
+            this.setState({ comment: null })
+        })
     }
 
     onSubmit = e => {
         if (!this.state.comment) {
             this.setState({ error: 'COMMENT_ERROR' })
         } else {
-            this.setState({ error: null })
             this.props.ADD_COMMENT(this.state.comment)
+            this.addCommentToDB();
+            this.setState({ error: null })
         }
         if (!this.props.isSignedIn) {
             this.setState({ error: 'SIGNIN_ERROR' })
@@ -61,18 +82,20 @@ class CommentSection extends Component {
                         </div>
                     </div> : null
                 }
-            < CommentList /> 
+                < CommentList />
             </div>
         )
     }
 }
 
 const mapStateToProps = state => {
+    console.log(state)
     return {
+        userId: state.auth.userId,
+        userName: state.auth.userName,
         isSignedIn: state.auth.isSignedIn,
         comment: state.comment
-
     }
 }
 
-export default connect(mapStateToProps, { ADD_COMMENT })(CommentSection);
+export default connect(mapStateToProps, { ADD_COMMENT, UPDATE_COMMENTS_LIST })(CommentSection);

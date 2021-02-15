@@ -9,8 +9,14 @@ export class CommentEntity {
     @Column()
     userName: string;
 
+    @Column()
+    userId: number;
+
     @Column({default: ''})
     date: string;
+
+    @Column()
+    time: string;
 
     @Column({default: ''})
     comment: string;

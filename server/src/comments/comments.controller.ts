@@ -1,4 +1,4 @@
-import { Controller, Body, Post, Get, Query, DefaultValuePipe, ParseIntPipe, Param, Patch } from '@nestjs/common';
+import { Controller, Body, Post, Get, Query, DefaultValuePipe, ParseIntPipe, Param, Patch, Delete } from '@nestjs/common';
 import { CommentsService } from './comments.service';
 import { CommentEntity } from './comments.entity';
 
@@ -9,7 +9,6 @@ export class CommentsController {
 
     @Post()
     createComment(@Body() body: CommentEntity) {
-        console.log(`inside`)
         return this.service.addOneComment(body)
     }
 
@@ -21,6 +20,11 @@ export class CommentsController {
     @Patch('like/:id')
     AddLikes(@Param('id') commentid: number) {
         return this.service.updateLikes(commentid)
+    }
+
+    @Delete(`/:id`)
+    deleteComment(@Param(`id`) commentid:number){
+        return this.service.deleteComment(commentid)
     }
 
     @Patch('dislike/:id')

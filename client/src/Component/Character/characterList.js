@@ -53,7 +53,6 @@ class CharacterList extends Component {
                         })
                     }
                 </Grid.Row>
-                }
             </Grid>
         )
 
