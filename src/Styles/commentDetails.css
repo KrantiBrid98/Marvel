@@ -1,0 +1,15 @@
+.commentText {
+    color: white !important;    
+}
+
+.comment-header {
+    font-size: 25px !important
+}
+
+.comment-val {
+    font-size: 20px !important;
+}
+
+.background-image {
+    background-image: url('../assets/comment-bg.jpg');
+}

@@ -1,0 +1,37 @@
+.mContainer {
+    background-color: black;
+    padding-top: 5rem;
+    min-height: 100vh;
+    z-index: 1;
+}
+
+@font-face {
+    font-family: "marvel";
+    src: url("./Marvel.ttf");
+
+}
+.postcardimgWrapper{
+    height: 170px;
+
+}
+
+.postcardImg{
+    object-fit: cover !important;
+    height: 100% !important;
+}
+
+.postcardLabel{
+    height: 50px;
+    background-color: #c21518 !important;
+}
+
+.postcardLabelText {
+    font-size: 15px !important;
+    text-align: center;
+}
+.App {
+    padding-top: 5rem;
+    min-height: 100vh;
+    /* background: slategray; */
+    background: linear-gradient(to right, #D4D3DD, #EFEFBB);
+  }
