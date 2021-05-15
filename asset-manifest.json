@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/Marvel/static/css/main.80deb305.chunk.css",
+    "main.js": "/Marvel/static/js/main.fee48245.chunk.js",
+    "main.js.map": "/Marvel/static/js/main.fee48245.chunk.js.map",
+    "runtime-main.js": "/Marvel/static/js/runtime-main.b56a8916.js",
+    "runtime-main.js.map": "/Marvel/static/js/runtime-main.b56a8916.js.map",
+    "static/js/2.0f4953ae.chunk.js": "/Marvel/static/js/2.0f4953ae.chunk.js",
+    "static/js/2.0f4953ae.chunk.js.map": "/Marvel/static/js/2.0f4953ae.chunk.js.map",
+    "index.html": "/Marvel/index.html",
+    "precache-manifest.cd84fc8f3aaf66106c7a8b9aba60fde1.js": "/Marvel/precache-manifest.cd84fc8f3aaf66106c7a8b9aba60fde1.js",
+    "service-worker.js": "/Marvel/service-worker.js",
+    "static/css/main.80deb305.chunk.css.map": "/Marvel/static/css/main.80deb305.chunk.css.map",
+    "static/js/2.0f4953ae.chunk.js.LICENSE.txt": "/Marvel/static/js/2.0f4953ae.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/Marvel/static/media/comment-bg.d534c1f6.jpg",
+    "static/media/imageLoaded.gif": "/Marvel/static/media/imageLoaded.99e95eaf.gif"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b56a8916.js",
+    "static/js/2.0f4953ae.chunk.js",
+    "static/css/main.80deb305.chunk.css",
+    "static/js/main.fee48245.chunk.js"
+  ]
+}
